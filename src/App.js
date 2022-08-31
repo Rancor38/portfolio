@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Bio from './components/Bio';
 import Projects from './components/projects/Projects';
-import Resume from './components/Resume';
+import Resume from './components/resume-components/Resume';
 
 const App = () => {
   return (
