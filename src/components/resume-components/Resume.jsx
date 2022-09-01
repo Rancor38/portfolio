@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 const Resume = () => {
     return (
-        <motion.div whileHover={{ scale: 1.01 }}className='resume'
+        <motion.div whileHover={{ scale: 1.01 }}className='article'
         >
             <ResumeTitleAndLocation/>
             <ResumeExperience1 />

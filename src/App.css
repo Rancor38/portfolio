@@ -17,11 +17,23 @@ a:hover {
   color: inherit;
 }
 
+.article {
+  margin: 5vw;
+  padding: 2vw;
+  border: outset;
+  border-width: 3px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;justify-content: center;
+  
+}
+
 header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 8vh;
+  width: 100vw;
   padding-left: 10px;
   padding-right: 10px;
   color: whitesmoke;
@@ -33,6 +45,10 @@ header {
   text-shadow: 1px 1px 0 gray;
 }
 
+.jobExperiences {
+  list-style-type: none;
+}
+
 .location {
   display: flex;
 
@@ -42,23 +58,13 @@ header {
   padding-left: 15px;
 }
 
-.resume {
-  margin: 5vw;
-  padding: 2vw;
-  border: outset;
-  border-width: 3px;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;justify-content: center;
-  
-}
-
 .resumeSection {
   text-align: center;
 }
 
 .technicalAndPersonalSkills {
 display: flex;
+justify-content: space-around;
 }
 
 #title {

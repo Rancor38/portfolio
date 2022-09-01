@@ -9,9 +9,9 @@ const ResumeExperience1 = () => {
                 <h5 className='jobTitleandPosition'>
                     General Assembly, Anaheim, CA — Software Engineering Fellow
                 </h5>
-                <h5 className='jobTitleandPosition'>
+                <h6 className='jobTitleandPosition'>
                     2022 - Present
-                </h5>
+                </h6>
                 <ul className='jobExperiences'>
                     <li>
                         Collaborate with fellow developers to create  a series of web-based applications.
