@@ -6,15 +6,18 @@ import { motion } from 'framer-motion'
 
 const BioTech = () => {
     return (
-        <ul>
+        <ul className='bioTech'>
             <motion.li whileHover={{ scale: 1.01 }} >
-                <img src={html} alt='html-5'/>
+                <img
+                    className='logo' src={html} alt='html-5' />
             </motion.li>
             <motion.li whileHover={{ scale: 1.01 }} >
-                <img src={css} alt='css-3'/>
+                <img
+                    className='logo' src={css} alt='css-3' />
             </motion.li>
             <motion.li whileHover={{ scale: 1.01 }} >
-                <img src={js} alt='JavaScript'/>
+                <img
+                    className='logo' src={js} alt='JavaScript' />
             </motion.li>
         </ul>
     );

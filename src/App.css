@@ -28,6 +28,11 @@ a:hover {
   
 }
 
+.bioTech {
+  list-style: none;
+  display: flex;
+}
+
 header {
   display: flex;
   justify-content: flex-start;
@@ -51,7 +56,11 @@ header {
 
 .location {
   display: flex;
+}
 
+.logo {
+  height: 5vw;
+  width: 5vw;
 }
 
 .menuButton {
