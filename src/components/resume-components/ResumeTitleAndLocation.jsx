@@ -6,9 +6,9 @@ const ResumeTitleAndLocation = () => {
                 <h3>
                     Zakariah O'Mara-Mezzano
                 </h3>
-                <p>
-                    Located in Anaheim, CA
-                    (424)-666-0598
+                <p className='location'>
+                    Located in Anaheim, CA <br></br>
+                    (424)-666-0598 <br></br>
                     zak.text@gmail.com
                 </p>
             </div>

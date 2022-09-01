@@ -4,20 +4,20 @@ import { motion } from 'framer-motion'
 const Header = () => {
     return (
         <>
-            <h1 id='title'>Zakariah O'Mara-Mezzano</h1>
+            {/* <h1 id='title'>Zakariah O'Mara-Mezzano</h1> */}
             <header>
-            <a className='menuButton' href='/'> <motion.h2
+            <a className='menuButton' href='/'> <motion.h1
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-            >Bio</motion.h2> </a>
-            <a className='menuButton' href='/projects'> <motion.h2
+            >Bio</motion.h1> </a>
+            <a className='menuButton' href='/projects'> <motion.h1
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-            >Projects</motion.h2> </a>
-            <a className='menuButton' href='/resume'> <motion.h2
+            >Projects</motion.h1> </a>
+            <a className='menuButton' href='/resume'> <motion.h1
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-            >Resume</motion.h2> </a>
+            >Resume</motion.h1> </a>
             </header>
         </>
     );

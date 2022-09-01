@@ -5,10 +5,12 @@ import ResumeExperience2 from './ResumeExperience2';
 import ResumeExperience3 from './ResumeExperience3';
 import ResumeTitleAndLocation from './ResumeTitleAndLocation';
 import TechnicalSkills from './TechnicalSkills';
+import { motion } from 'framer-motion'
 
 const Resume = () => {
     return (
-        <div className='resume'>
+        <motion.div whileHover={{ scale: 1.01 }}className='resume'
+        >
             <ResumeTitleAndLocation/>
             <ResumeExperience1 />
             <ResumeExperience2 />
@@ -17,7 +19,7 @@ const Resume = () => {
                 <TechnicalSkills />
                 <PersonalSkills />
             </div>
-        </div>
+        </motion.div>
     );
 };
 
