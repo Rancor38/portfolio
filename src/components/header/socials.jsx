@@ -8,6 +8,10 @@ const socials = () => {
                 <img
                     className='social' src='' alt='linkedIn' />
                  </motion.a>
+            <motion.a whileHover={{ scale: 1.25 }}  href='https://github.com/Rancor38' target="_blank">
+                <img
+                    className='social' src='' alt='github' />
+                 </motion.a>
         </>
     );
 };

@@ -6,6 +6,7 @@ const Header = () => {
         <>
             {/* <h1 id='title'>Zakariah O'Mara-Mezzano</h1> */}
             <header>
+            <img src=''
             <a className='menuButton' href='/'> <motion.h1
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
