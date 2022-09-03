@@ -1,5 +1,14 @@
 export const images = [
-    "https://d33wubrfki0l68.cloudfront.net/dd23708ebc4053551bb33e18b7174e73b6e1710b/dea24/static/images/wallpapers/shared-colors@2x.png",
-    "https://d33wubrfki0l68.cloudfront.net/49de349d12db851952c5556f3c637ca772745316/cfc56/static/images/wallpapers/bridge-02@2x.png",
-    "https://d33wubrfki0l68.cloudfront.net/594de66469079c21fc54c14db0591305a1198dd6/3f4b1/static/images/wallpapers/bridge-01@2x.png"
-  ];
+  {
+    "image": "https://github.com/ez-notes/frontend/raw/main/readme-docs/1-Signup-page.png",
+    "url": "https://github.com/ez-notes/frontend"
+  },  
+  {
+    "image": "https://github.com/ez-notes/frontend/raw/main/readme-docs/1-Signup-page.png",
+    "url": "https://github.com/ez-notes/frontend"
+  }, 
+  {
+    "image": "https://github.com/Rancor38/monster/raw/main/Screenshot%202022-09-03%20at%201.06.18%20AM.png?raw=true",
+    "url": "https://github.com/Rancor38/monster"
+  }, 
+];

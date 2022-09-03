@@ -8,6 +8,7 @@ body {
 }
 
 .light {
+    z-index: -1;
     position: absolute;
     width: 0px;
     opacity: .75;
