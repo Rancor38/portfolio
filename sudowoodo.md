@@ -9,3 +9,5 @@ I need thhe images on the carousel to each link themselves to a repo for the pro
 I need to slow the carousel down.
 
 Include all the tech you can find logos for.
+
+fix slideshow buttons
