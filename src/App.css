@@ -31,8 +31,10 @@ a:hover {
 
 .avatar {
   width: 40vh;
-  padding: 16px;
+  padding: 6px;
   border-radius: 64px;
+  border: outset;
+  border-width: 1px;
 }
 
 .bioTagline {
