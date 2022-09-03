@@ -6,12 +6,11 @@
 
 .container {
     display: flex;
-    height: 80vh;
 }
 
 .slideshow {
     margin: auto;
-    width: 100vw;
+    width: 75vw;
     aspect-ratio: calc(16/9);
     position: relative;
     overflow: hidden;
@@ -26,6 +25,7 @@
     border-radius: 32px;
     background-color: rgba(0, 0, 0, 0.5
     );
+    box-shadow: 0 5px #666;
     border: none;
     cursor: pointer;
     text-align: center;
@@ -36,18 +36,20 @@
     background-color: #ffa600cb;
 }
 
+.slideShowButton:active {
+    box-shadow: none
+}
+
 .prevButton {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 16px;
-    transform: translateY(-50%);
 }
 
 .nextButton {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 16px;
-    transform: translateY(-50%);
 }
 
 .slides {
@@ -60,10 +62,16 @@
     object-position: center;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 1000px) {
     .container {
-        width: 125%;
+        height: 60vh;
     }
+    .slideshow {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 430px) {
     .slideshow {
         width: 100%;
     }
