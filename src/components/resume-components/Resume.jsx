@@ -6,6 +6,7 @@ import ResumeExperience3 from './ResumeExperience3';
 import ResumeTitleAndLocation from './ResumeTitleAndLocation';
 import TechnicalSkills from './TechnicalSkills';
 import { motion } from 'framer-motion'
+import ResumeDownloadAsPdf from './ResumeDownloadAsPdf';
 
 const Resume = () => {
     return (
@@ -19,6 +20,7 @@ const Resume = () => {
                 <TechnicalSkills />
                 <PersonalSkills />
             </div>
+            <ResumeDownloadAsPdf />
         </motion.div>
     );
 };
