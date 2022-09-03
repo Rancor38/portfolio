@@ -71,7 +71,7 @@ const logoJsonArr = [
     },
     {
         "name": "express",
-        "logo": "https://raw.githubusercontent.com/Rancor38/portfolio/dc90b3e1df836062f3a8462f4b7f2fa78114b9ea/public/logos/express-icon.svg",
+        "logo": "https://raw.githubusercontent.com/Rancor38/portfolio/317fae68bdd0be69516141ac7ff8ff2deefd177f/public/logos/expressjs-icon.svg",
         "learnMore": "https://expressjs.com/"
     }
 ]

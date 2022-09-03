@@ -62,6 +62,7 @@ header {
 .logo {
   height: 5vw;
   width: 5vw;
+  padding-inline: 2px;
 }
 
 .menuButton {
