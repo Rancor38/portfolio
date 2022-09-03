@@ -9,11 +9,11 @@ const Header = () => {
                 <a className='menuButton' href='/'> <motion.img className='logo'
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        src='https://github.com/Rancor38/portfolio/blob/main/public/logos/Z-Logo.png?raw=true' alt='Z-logo'/> </a>
-                <a className='menuButton' href='/'> <motion.h1
+                        src='https://raw.githubusercontent.com/Rancor38/portfolio/68e574bee7bb8b305934fea7cc55414c037bd944/public/logos/Z-Logo.png?raw=true' alt='Z-logo'/> </a>
+                {/* <a className='menuButton' href='/'> <motion.h1
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                >Bio</motion.h1> </a>
+                >Bio</motion.h1> </a> */}
                 <a className='menuButton' href='/projects'> <motion.h1
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}

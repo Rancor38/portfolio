@@ -34,6 +34,14 @@ a:hover {
   display: flex;
 }
 
+.GA{
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  padding: 0;
+}
+
 header {
   display: flex;
   justify-content: flex-start;

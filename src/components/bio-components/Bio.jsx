@@ -12,9 +12,6 @@ const Bio = () => {
             <br></br>
             I've been building sites with the following tools, and having a lot of fun.
             </p>
-            {/* <p>
-              HTML | CSS | JavaScript | APIs | Postman | Node | Express | GitHub | Django | SQL | Python | React | Microsoft Office Suite | Google Docs, Drive, and Sheets | Jira  
-            </p> */}
             <BioTech />
         </motion.article>
     );
