@@ -5,7 +5,7 @@ import BioTech from './BioTech';
 
 const Bio = () => {
     return (
-        <motion.article whileHover={{ scale: 1.01 }} className='article'>
+        <motion.article whileHover={{ scale: 1.01 }} className='article welcome'>
             <BioTagline />
             <p>
                 For years, while working in food service to make ends meet, friends tried to convince me to get into tech. They all told me it would be tough to make the change, but that it’d be worth it. So I signed up for General Assembly, and that, is where I find myself today, and I’m having a blast knowing that the best of times are yet ahead.

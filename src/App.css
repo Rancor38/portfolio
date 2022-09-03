@@ -29,6 +29,18 @@ a:hover {
   justify-content: center;
 }
 
+.avatar {
+  width: 40vh;
+  padding: 16px;
+  border-radius: 64px;
+}
+
+.bioTagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .bioTech {
   list-style: none;
   padding: 0;
@@ -132,6 +144,17 @@ justify-content: space-around;
   justify-content: space-around;
   text-align: center;
 
+}
+
+.welcome {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .welcome {
+    max-width: 90%;
+  }
 }
 
 @media only screen and (max-width: 430px) {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { images } from './image-data';
+import { images } from './imageObjects/image-data';
 import { AnimatePresence, motion } from 'framer-motion'
 
 const variants = {
@@ -72,8 +72,8 @@ const Slideshow = () => {
           </motion.div>
           
           </AnimatePresence>
-        <button className='prevButton' onClick={prevStep}>◀️</button>
-        <button className='nextButton' onClick={nextStep}>▶️</button>
+        <button className='prevButton slideShowButton' onClick={prevStep}>◀️</button>
+        <button className='nextButton slideShowButton' onClick={nextStep}>▶️</button>
     </div>
 </div>
   );
