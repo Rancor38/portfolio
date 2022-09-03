@@ -20,24 +20,24 @@ import { motion } from 'framer-motion'
 
 const BioTech = () => {
 
-    const index = []
-    const findMyIndex = (techObject) => {
+    const eachTech = []
+    const findEachTech = (techObject) => {
         for (let i = 0;
             i < techObject.length;
             i += 1) {
-            index.push(techObject[i])
+            eachTech.push(techObject[i])
             }
     }
 
     return (
         <ul className='bioTech'>
-            {findMyIndex(techObject)}
-            {console.log(index)}
-            {index.map((logo) => (
-                <motion.li whileHover={{ scale: 1.25 }} >
+            {findEachTech(techObject)}
+            {console.log(eachTech)}
+            {eachTech.map((logo) => (
+                <motion.a whileHover={{ scale: 1.25 }}  href={logo.learnMore} target="_blank">
                 <img
                     className='logo' src={logo.logo} alt={logo.name} />
-                 </motion.li>
+                 </motion.a>
             ))}
         </ul>
     );
