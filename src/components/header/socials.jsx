@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'
 
-const Socials = () => {
+const socials = () => {
     return (
         <div className='socials'>
             <motion.a whileHover={{ scale: 1.25 }}  href='https://www.linkedin.com/in/zakariah-om' target="_blank">
@@ -16,4 +16,4 @@ const Socials = () => {
     );
 };
 
-export default Socials;
+export default socials;

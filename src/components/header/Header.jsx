@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion'
-import Socials from './Socials';
+import Socials from './socials';
 import LogoProjectsResume from './LogoProjectsResume';
 
 const Header = () => {
