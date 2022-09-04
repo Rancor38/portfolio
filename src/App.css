@@ -113,6 +113,8 @@ header {
 
 .menuButton {
   padding-left: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .resumeSection {
@@ -167,13 +169,21 @@ justify-content: space-around;
 
   header {
     width: 110%;
+    font-stretch: narrower;
+  }
+
+  .socials {
+    grid-area: 1 / 5 / 2 / 6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
   }
 
   .socials img {
-    height: 2rem;
-    margin-left: 5px;
-    margin-bottom: 10px;
+    height: 3rem;
   }
+  
 }
 
 @media only screen and (max-width: 330px) {
