@@ -161,18 +161,18 @@ justify-content: space-around;
 
 @media only screen and (max-width: 430px) {
   .article {
-    margin-left: 15%;
-    width: 110%;
+    /* margin-left: 15%; */
+    width: 80%;
   }
 
   header {
-    width: 125%;
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 330px) {
   header {
-    width: 160%;
+    width: 100%;
   }
 }
 
