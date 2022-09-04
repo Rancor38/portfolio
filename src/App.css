@@ -86,7 +86,7 @@ header {
 }
 
 .jobExperiences {
-  list-style-type: none;
+  list-style-type: square;
 }
 
 .location {
@@ -194,7 +194,7 @@ justify-content: space-around;
 
 @media (prefers-color-scheme: dark) {
   .article {
-    background: orange;
+    background: rgb(199, 199, 199);
     border-color: black;
   }
 }
