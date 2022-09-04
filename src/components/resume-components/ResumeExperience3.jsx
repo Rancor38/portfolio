@@ -3,24 +3,21 @@ import React from 'react';
 const ResumeExperience1 = () => {
     return (
         <article>
-                <h4 className='resumeSection'>
-                    Experience
-                </h4>
                 <h5 className='jobTitleandPosition'>
-                    General Assembly, Anaheim, CA — Software Engineering Fellow
+                    Mrs. Knott's Chicken Dinner Restaurant, Buena Park, CA — Waiter
                 </h5>
                 <h6 className='jobTitleandPosition'>
-                    2022 - Present
+                    2015 - 2016
                 </h6>
                 <ul className='jobExperiences'>
                     <li>
-                        Collaborate with fellow developers to create  a series of web-based applications.
+                        Used sales goals and tracking data to reach our targeted sales-objectives.
                     </li>
                     <li>
-                        Completed projects developing fullstack web applications, hosted on Heroku, Elastic Beanstalk, and Netlify.
+                        Assessed restaurant capacity and coordinated with my leadership team to deliver customer satisfaction.
                     </li>
                     <li>
-                        Developed React applications using an agile git workflow.
+                        Sustained theming and customer experience.
                     </li>
                 </ul>
             </article>

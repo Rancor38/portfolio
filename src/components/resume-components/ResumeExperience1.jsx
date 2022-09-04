@@ -3,9 +3,6 @@ import React from 'react';
 const ResumeExperience1 = () => {
     return (
         <article>
-                <h4 className='resumeSection'>
-                    Experience
-                </h4>
                 <h5 className='jobTitleandPosition'>
                     General Assembly, Anaheim, CA — Software Engineering Fellow
                 </h5>

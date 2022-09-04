@@ -3,25 +3,25 @@ import React from 'react';
 const ResumeExperience1 = () => {
     return (
         <article>
-                <h4 className='resumeSection'>
-                    Experience
-                </h4>
                 <h5 className='jobTitleandPosition'>
-                    General Assembly, Anaheim, CA — Software Engineering Fellow
+                    Amarith Cafe | Starbucks, Anaheim, CA — FOH Manager | Shift Supervisor
                 </h5>
                 <h6 className='jobTitleandPosition'>
-                    2022 - Present
+                    2016-2017 | 2017-2022
                 </h6>
                 <ul className='jobExperiences'>
-                    <li>
-                        Collaborate with fellow developers to create  a series of web-based applications.
-                    </li>
-                    <li>
-                        Completed projects developing fullstack web applications, hosted on Heroku, Elastic Beanstalk, and Netlify.
-                    </li>
-                    <li>
-                        Developed React applications using an agile git workflow.
-                    </li>
+                <li>
+                    Cross-trained in POS development to adjust and publish features to an NCR point of sale system.
+                </li>
+                <li>
+                    Improved customer connection survey metrics by 6% by creating an environment of positivity and cross-coaching.
+                </li>
+                <li>
+                    Managed  inventory, adapted the team to new technologies, and improved efficiency through process automation.
+                </li>
+                <li>
+                    Developed training materials for customer care and service.
+                </li>
                 </ul>
             </article>
     );

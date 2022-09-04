@@ -12,7 +12,10 @@ const Resume = () => {
     return (
         <motion.div whileHover={{ scale: 1.01 }}className='article'
         >
-            <ResumeTitleAndLocation/>
+            <ResumeTitleAndLocation />
+            <h4 className='resumeSection'>
+                    Experience
+                </h4>
             <ResumeExperience1 />
             <ResumeExperience2 />
             <ResumeExperience3 />
