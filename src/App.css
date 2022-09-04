@@ -168,7 +168,7 @@ justify-content: space-around;
   }
 
   header {
-    width: 110%;
+    width: 100%;
     font-stretch: narrower;
   }
 
@@ -188,7 +188,7 @@ justify-content: space-around;
 
 @media only screen and (max-width: 330px) {
   header {
-    width: 110%;
+    width: 100%;
   }
 }
 
