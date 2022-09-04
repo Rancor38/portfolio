@@ -81,7 +81,7 @@ header {
   color: whitesmoke;
   background: linear-gradient(45deg, rgb(0, 0, 0, 0.9) 60%, orange);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: xx-large;
+  font-size: 1rem;
   text-shadow: 1px 1px 0 gray;
 }
 
