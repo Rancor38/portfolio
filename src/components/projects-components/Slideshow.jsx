@@ -3,32 +3,32 @@ import { images } from './imageObjects/image-data';
 import { AnimatePresence, motion } from 'framer-motion'
 import './styles.css'
 
-const variants = {
-  intial: direction => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    }
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    trasition: {
-      x: { type: "spring", stiffness: 300, damping: 30},
-      opacity: { duration: 0.2 },
-    }
-  },
-  exit: direction => {
-    return {
-      x: direction > 0 ? -1000 : 1000,
-      opacity: 0,
-      trasition: {
-        x: { type: "spring", stiffness: 100, damping: 20 },
-        opacity: { duration: 0.2 },
-      }
-    }
-  },
-}
+// const variants = {
+//   intial: direction => {
+//     return {
+//       x: direction > 0 ? 1000 : -1000,
+//       opacity: 0,
+//     }
+//   },
+//   animate: {
+//     x: 0,
+//     opacity: 1,
+//     trasition: {
+//       x: { type: "spring", stiffness: 300, damping: 30},
+//       opacity: { duration: 0.2 },
+//     }
+//   },
+//   exit: direction => {
+//     return {
+//       x: direction > 0 ? -1000 : 1000,
+//       opacity: 0,
+//       trasition: {
+//         x: { type: "spring", stiffness: 100, damping: 20 },
+//         opacity: { duration: 0.2 },
+//       }
+//     }
+//   },
+// }
 
 const Slideshow = () => {
 
@@ -59,12 +59,12 @@ const Slideshow = () => {
         <AnimatePresence initial={false} custom={direction}>
             
           <motion.a
-            variants={variants}
-            animate='animate'
-            initial='initial'
-            exit='exit'
-            key={images[index]}
-            custom={direction}
+            // variants={variants}
+            // animate='animate'
+            // initial='initial'
+            // exit='exit'
+            // key={images[index]}
+            // custom={direction}
             href={images[index].url}
             target='_blank'
             rel='noreferrer'>
