@@ -66,7 +66,7 @@ a:hover {
   padding: 0;
   font: inherit;
   outline: inherit;
-  width: 15vw;
+  width: fit-content
 }
 
 header {
