@@ -168,6 +168,12 @@ justify-content: space-around;
   header {
     width: 110%;
   }
+
+  .socials img {
+    height: 2rem;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (max-width: 330px) {
