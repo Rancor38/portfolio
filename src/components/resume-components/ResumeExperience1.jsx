@@ -4,17 +4,17 @@ const ResumeExperience1 = () => {
     return (
         <article>
                 <h5 className='jobTitleandPosition'>
-                    General Assembly, Anaheim, CA — Software Engineering Fellow
+                    General Assembly, Anaheim, CA — Software Engineering Fellow | Instructional Associate
                 </h5>
                 <h6 className='jobTitleandPosition'>
                     2022 - Present
                 </h6>
                 <ul className='jobExperiences'>
                     <li>
-                        Collaborate with fellow developers to create  a series of web-based applications.
+                        Prepared materials for running cohorts of 30+ students in an immersive software engineering course.
                     </li>
                     <li>
-                        Completed projects developing fullstack web applications, hosted on Heroku, Elastic Beanstalk, and Netlify.
+                        Completed projects developing fullstack web applications, hosted on Heroku and Netlify.
                     </li>
                     <li>
                         Developed React applications using an agile git workflow.
