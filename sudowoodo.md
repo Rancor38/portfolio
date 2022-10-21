@@ -11,3 +11,5 @@ I need to slow the carousel down.
 Include all the tech you can find logos for.
 
 fix slideshow buttons
+
+Add names for each of the symbols (postgress, mongodb, html, etc)
