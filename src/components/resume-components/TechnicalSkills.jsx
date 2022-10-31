@@ -8,12 +8,6 @@ const TechnicalSkills = () => {
             </h4>
             <ul>
                 <li>
-                    Computer technology
-                </li> 
-                <li>
-                    Data Collection and Interpretation
-                </li>
-                <li>
                     HTML
                 </li>
                 <li>
@@ -23,10 +17,16 @@ const TechnicalSkills = () => {
                     JavaScript
                 </li>
                 <li>
-                    APIs
+                    Next.js
                 </li>
                 <li>
                     React
+                </li>
+                <li>
+                    Python
+                </li> 
+                <li>
+                    Django
                 </li>
                 <li>
                     Microsoft Office Suite

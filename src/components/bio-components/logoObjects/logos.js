@@ -50,9 +50,9 @@ const logoJsonArr = [
         "learnMore": "https://www.mongodb.com/"
     },
     {
-        "name": "mysql",
+        "name": "next.js",
         "logo": "https://raw.githubusercontent.com/Rancor38/portfolio/dc90b3e1df836062f3a8462f4b7f2fa78114b9ea/public/logos/mysql-icon.svg",
-        "learnMore": "https://dev.mysql.com/"
+        "learnMore": "https://nextjs.org/"
     },
     {
         "name": "postman",
