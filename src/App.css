@@ -46,6 +46,7 @@ a:hover {
 .bioTech {
   list-style: none;
   padding: 0;
+  align-items: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -85,6 +86,10 @@ header {
   text-shadow: 1px 1px 0 gray;
 }
 
+.hidden-until-hover {
+  display: none;
+}
+
 .jobExperiences {
   list-style-type: square;
 }
@@ -98,6 +103,13 @@ header {
   width: 4rem;
   padding-left: 10px;
   padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.logo:hover + .hidden-until-hover {
+  display: block;
 }
 
 .logoProjectResume {

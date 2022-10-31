@@ -36,8 +36,9 @@ const BioTech = () => {
             {eachTech.map((logo) => (
                 <motion.a whileHover={{ scale: 1.25 }}  href={logo.learnMore} target="_blank">
                 <img
-                    className='logo' src={logo.logo} alt={logo.name} />
-                 </motion.a>
+                        className='logo' src={logo.logo} alt={logo.name} />
+                    {/* <p className='logo hidden-until-hover'>{ logo.name }</p> */}
+                </motion.a>
             ))}
         </ul>
     );
