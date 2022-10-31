@@ -51,7 +51,7 @@ const logoJsonArr = [
     },
     {
         "name": "next.js",
-        "logo": "https://raw.githubusercontent.com/Rancor38/portfolio/dc90b3e1df836062f3a8462f4b7f2fa78114b9ea/public/logos/mysql-icon.svg",
+        "logo": "https://raw.githubusercontent.com/Rancor38/portfolio/96e570cb73b5fd366957d3095dcf61716e6ad368/public/logos/nextjs-icon.svg",
         "learnMore": "https://nextjs.org/"
     },
     {
