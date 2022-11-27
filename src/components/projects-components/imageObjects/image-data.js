@@ -8,6 +8,10 @@ export const images = [
     "url" : "https://github.com/Rancor38/rpg-dice-roller"
   },
   {
+    "image": "https://github.com/Rancor38/textmagotchi/raw/main/public/game-image-1.png",
+    "url" : "https://github.com/Rancor38/textmagotchi"
+  },
+  {
     "image": "https://github.com/Rancor38/portfolio/blob/main/public/project-images/Monster-Finder.png?raw=true",
     "url" : "https://github.com/Rancor38/monster"
   },  
