@@ -8,19 +8,17 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     text-shadow: 1px 1px 0 gray;
+    text-decoration: underline;
 }
 
-@media only screen and (max-width: 1000px) {
-    .container {
-        height: 60vh;
-    }
-    .slideshow {
-        width: 100%;
-    }
+.carousel-indicators [data-bs-target] {
+    text-shadow: 1px 1px 0 grey;
+    background-color: orange;
 }
 
-@media only screen and (max-width: 430px) {
-    .slideshow {
-        width: 100%;
+@media only screen and (min-width: 1000px) {
+    .dblock {
+        width: 70vw;
+        height: 39vw;
     }
 }
