@@ -1,1 +1,0 @@
-Add new projects into the image-data in the convention of a JSOn object, with a url and an image, and they'll automatically be imported into the slideshow.
