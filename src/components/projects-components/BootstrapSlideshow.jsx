@@ -40,11 +40,11 @@ const BootstrapSlideshow = () => {
                     src={images.list[imageIndex].image}
                     alt={imageIndex}
                     />
-                <Carousel.Caption>
+                {/* <Carousel.Caption>
                         <h1>
                             {images.list[imageIndex].name}
                         </h1>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
             </Carousel.Item>
             // <img
             //     className='dblock w-100'
