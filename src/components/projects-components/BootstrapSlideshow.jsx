@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import { Carousel } from 'react-bootstrap/';
 import './styles.css';
+import { motion } from 'framer-motion';
 
 const BootstrapSlideshow = () => {
 
@@ -36,21 +37,21 @@ const BootstrapSlideshow = () => {
         const eachItem = images.list.map((element, imageIndex) => 
             <Carousel.Item> 
                     <img
-                        className='dblock w-100'
+                        className='dblock'
                         src={images.list[imageIndex].image}
                         alt={imageIndex}
-                        />
+                />
+                
                 <Carousel.Caption>
-                    
                     <a href={images.list[imageIndex].url}
                         target='_blank'
                         rel='noreferrer'>
-                        <h1>
+                        <motion.h1 whileHover={{ scale: 1.03 }}>
                             {images.list[imageIndex].name}
-                        </h1>
+                        </motion.h1>
                     </a>
-
                 </Carousel.Caption>
+
             </Carousel.Item>    
             // <img
             //     className='dblock w-100'
@@ -60,9 +61,11 @@ const BootstrapSlideshow = () => {
         )
         
         return (
-            <Carousel activeIndex={index} onSelect={handleSelect}>
-            {eachItem}
-        </Carousel>
+            <motion.main whileHover={{ scale: 1.01 }}>
+                <Carousel activeIndex={index} onSelect={handleSelect}>
+                    {eachItem}
+                </Carousel>
+            </motion.main>
     );
 }
 };

@@ -13,3 +13,5 @@ Include all the tech you can find logos for.
 fix slideshow buttons
 
 Add names for each of the symbols (postgress, mongodb, html, etc)
+
+Get Square Images for Project, to make them more mobile responsive (and make them look like promotional images while you're at it.)
