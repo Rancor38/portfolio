@@ -13,7 +13,6 @@ const BootstrapSlideshow = () => {
         fetch(images)
             .then((res) => res.json())
             .then(data => {
-                console.log(data)
                 setImages(data)
             })
         .catch(err => console.log(err))
@@ -27,7 +26,6 @@ const BootstrapSlideshow = () => {
     
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex)
-        console.log(index)
     }
 
 
