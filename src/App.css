@@ -230,12 +230,13 @@
 
 @media only screen and (max-width: 1200px) {
   .navBar {
-    position: sticky;
+  position: sticky;
   left: 0;
   top: 0%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: row;
+  flex-shrink: initial;
   justify-content: space-around;
   align-items: center;
   width: 90%;
@@ -252,6 +253,35 @@
   
   .navBar li {
     margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navBar {
+  position: sticky;
+  left: 0;
+  top: 0;
+  transform: translateY(0%);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: initial;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: fit-content;
+  background-color: #333;
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  }
+  
+  .navBar:hover {
+    width: 90%;
+  }
+  
+  .navBar li {
+    margin: 10px 0;
+    width: max-content;
   }
 }
 
@@ -285,6 +315,10 @@
   border-radius: 50%;
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
   animation: glowing 2s ease-in-out infinite;
+}
+
+.snoof {
+  width: 70%;
 }
 
 @keyframes glowing {
