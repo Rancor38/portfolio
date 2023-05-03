@@ -7,12 +7,27 @@ const Projects = () => {
         {
             name: "RPG-Dice-React",
             description: "An application for rolling polyhedral dice for tabletop rollplaying games.",
-            url: "https://github.com/Rancor38/rpg-dice-react",
+            url: "https://rpg-dice-react.netlify.app/",
         },
        {
             name: "Monster Finder",
             description: "An application for finding monsters to use in your Dungeons & Dragons 5th Edition roleplaying game.",
-            url: "https://github.com/Rancor38/monster",
+            url: "https://monsterfinder5e.netlify.app/",
+        },
+       {
+            name: "Textmagotchi",
+            description: "A Tamagotchi-like game for your browser!",
+            url: "https://rancor38.github.io/textmagotchi/",
+        },
+       {
+            name: "DM's Guild Titles",
+            description: "A series of booklets published on DM's Guild",
+            url: "https://www.dmsguild.com/browse.php?keywords=zakariah&page=1&sort=4a",
+        },
+       {
+            name: "EZ-Notes",
+            description: "An application for saving simple text notes online.",
+            url: "https://ez-notes.netlify.app/",
         },
     ]
 

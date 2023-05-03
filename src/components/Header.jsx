@@ -1,6 +1,22 @@
+import { useEffect, useState } from "react";
 import TypeOut from "./TypeOut";
 
 const Header = () => {
+
+    const [randomString, setRandomString] = useState(null)
+    
+    //A function that selects a random string from an array of strings
+    function selectRandomString(stringsArray) {
+        const randomIndex = Math.floor(Math.random() * stringsArray.length);
+        return stringsArray[randomIndex];
+    }
+    const stringsArray = ['Writer, Software Developer, and Drinker of Coffee', 'Software Developer, Writer, and Expert on Life',  'Writer, Software Developer, and Game Master', 'Software Developer, Writer, and Drinker of Coffee', 'Software Developer, Writer, and Drinker of Coffee', 'Writer, Software Developer, and Drinker of Coffee',];
+
+    useEffect(() => {
+        setRandomString(selectRandomString(stringsArray))     
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
 
     return (
         <header>
@@ -12,7 +28,7 @@ const Header = () => {
                 <div className="glow"></div>
             </div>
             <p>
-                <TypeOut inputString="Writer, Software Developer, and Drinker of Coffee" time="3000" typeSpeed={100} />
+                <TypeOut inputString={randomString} time="3000" typeSpeed={100} />
             </p>
         </header>
     );

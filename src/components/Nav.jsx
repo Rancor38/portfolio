@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import DownloadPDF from './DownloadPDF';
 
 const Nav = (props) => {
-    console.log(props)
     return (
         <ul className="navBar">
             <Link to='/'>
@@ -15,9 +14,10 @@ const Nav = (props) => {
             <Link to='/projects'>
             <li onClick={props.handler}>Projects</li>
             </Link>
+            <DownloadPDF />
             <Link to='/contact'>
             <li onClick={props.handler}>Contact Me</li>
-                </Link>
+            </Link>
         </ul>
     );
 };
