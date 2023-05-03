@@ -1,1 +1,0 @@
-The Logos.js file in this folder, is all you need to edit in order to add another tech stack. You can publish the logo images to github by pushing this repo to github with the SVG you want inside of the logos folder in the public folder, and then use the github url as the link within the logo.js 
