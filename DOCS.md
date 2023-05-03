@@ -22,7 +22,3 @@ Last updated --> May 3, 2023
 For the moment nothing major is in the icebox. There might be in the future, but we'll see.
 
 I want to make the loading page look nicer, maybe add a loading circle instead, but there's not much of a point since I don't have it rendering.
-
-Make snoofs responsive
-
-Make menu bar responsive for small phones.
