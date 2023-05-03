@@ -174,7 +174,7 @@ const other = [
   {
     name: "Trello",
     url: "https://trello.com/",
-    logo:"https://assets.stickpng.com/images/58482beecef1014c0b5e4a36.png"
+    logo:"https://w7.pngwing.com/pngs/115/721/png-transparent-trello-social-icons-icon.png"
   },
   {
     name: "Office 365",
