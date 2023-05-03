@@ -178,6 +178,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   overflow: hidden;
+  z-index: 10;
 }
 
 .navBar:hover {
@@ -282,6 +283,11 @@
   .navBar li {
     margin: 10px 0;
     width: max-content;
+  }
+
+  .about-me {
+    margin-top: 120px;
+    margin-bottom: 50px;
   }
 }
 
