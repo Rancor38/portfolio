@@ -32,7 +32,7 @@ const languages = [
   {
     name: "EJS",
     url: "https://ejs.co/",
-    logo:"https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_ejs_icon_130626.png"
+    logo:"https://cdn.icon-icons.com/icons2/2148/PNG/512/ejs_icon_132422.png"
   },
 ]
 
