@@ -195,6 +195,7 @@
   cursor: pointer;
   white-space: nowrap;
   width: 30px;
+  text-decoration: none;
 }
 
 .navBar li::before {
