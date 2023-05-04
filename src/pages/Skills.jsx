@@ -29,11 +29,6 @@ const languages = [
     url: "https://sass-lang.com/",
     logo:"https://sass-lang.com/assets/img/styleguide/seal-color-aef0354c.png"
   },
-  {
-    name: "EJS",
-    url: "https://ejs.co/",
-    logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYv_8rmk2dirJy0Jk8oQ7L-kdQWQXmRRZDvAMEQD1Q6T1jDV1bO9_NUBGJayt1nYQ0TWs&usqp=CAU"
-  },
 ]
 
 const frameworks = [
