@@ -11,7 +11,7 @@ const About = () => {
                         Hello, welcome to my website! This site is a showcase of a few of the things that I do for work. The menu details a few different pages to look over.
                     </li>
                     <li>
-                        The skills page details the software and development tools that I use the most often, and while it's not a comprehensive list of every tool that I've used in my life, they are the spread of them that I feel confident in.
+                        The skills page lists the software and development tools that I use the most often, and while it's not a comprehensive list of every tool that I've used in my life, they are the spread of them that I feel confident in.
                     </li>
                     <li>
                         In projects, you'll find an array of published applications and other projects that I've been proud to work on.
