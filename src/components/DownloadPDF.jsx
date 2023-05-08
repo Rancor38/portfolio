@@ -14,6 +14,8 @@ function DownloadPDF() {
     downloadLink.click();
       // Remove the temporary anchor element
     document.body.removeChild(downloadLink);
+    // Open the downloaded file in a new window
+    window.open(fileURL, "_blank");
   }
   
 
