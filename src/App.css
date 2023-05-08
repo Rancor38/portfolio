@@ -253,27 +253,33 @@
   }
   
   .navBar li {
-    margin: 10px 0;
+    margin-top: 24px;
+    margin-left: 0px;
+  }
+  
+  .navBar a {
+    margin-left: 0px;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .navBar {
-  position: sticky;
-  left: 0;
-  top: 0;
+  /* position: sticky; */
+  left: 0px;
+  top: 0px;
   transform: translateY(0%);
   display: flex;
   flex-direction: column;
   flex-shrink: initial;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 90%;
   height: fit-content;
   background-color: #333;
-  border-radius: 40px;
+  border-radius: 0px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  border-radius: 0px;
   }
   
   .navBar:hover {
@@ -281,8 +287,15 @@
   }
   
   .navBar li {
-    margin: 10px 0;
-    width: max-content;
+    margin: 10px 0px;
+    width: 35%;
+    white-space: none;
+  }
+  
+  .navBar a {
+    margin: 10px 0px;
+    width: 35%;
+    white-space: none;
   }
 
   .about-me {

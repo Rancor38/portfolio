@@ -21,8 +21,8 @@ const Projects = () => {
         },
        {
             name: "DM's Guild Titles",
-            description: "A series of booklets published on DM's Guild",
-            url: "https://www.dmsguild.com/browse.php?keywords=zakariah&page=1&sort=4a",
+            description: "A series of booklets published on DM's Guild. (Unavailable on Mobile devices, instead search 'Zakariah')",
+            url: "https://www.dmsguild.com/browse.php?author=Zakariah",
         },
        {
             name: "EZ-Notes",
