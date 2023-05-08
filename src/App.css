@@ -304,6 +304,42 @@
   }
 }
 
+@media screen and (orientation: landscape) and (min-aspect-ratio: 16/9) {
+  /* CSS rules for landscape orientation with an aspect ratio of 16:9 or greater */
+  @media only screen and (max-width: 1200px) {
+    .navBar {
+    position: sticky;
+    left: 0;
+    top: 0%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    flex-shrink: initial;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 100px;
+    background-color: #333;
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    }
+    
+    .navBar:hover {
+      width: 90%;
+    }
+    
+    .navBar li {
+      margin-top: 24px;
+      margin-left: 0px;
+    }
+    
+    .navBar a {
+      margin-left: 0px;
+    }
+  }
+}
+
 #fade-out {
   opacity: 0;
   transition: opacity 0.0s ease-out;
