@@ -33,6 +33,11 @@
         margin-bottom: 50px;
 }
 
+.about-me a {
+        text-decoration: none;
+        color: #000000;
+}
+
 .about-me h2 {
         font-size: 24px;
         margin-bottom: 10px;
