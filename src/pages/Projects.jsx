@@ -25,6 +25,11 @@ const Projects = () => {
             url: "https://www.dmsguild.com/browse.php?author=Zakariah",
         },
        {
+            name: "Simple-To-Do",
+            description: "A simple rapidly fast to-do application that works without a database.",
+            url: "https://rancor38.github.io/simple-to-do/",
+        },
+       {
             name: "EZ-Notes",
             description: "An application for saving simple text notes online.",
             url: "https://ez-notes.netlify.app/",
