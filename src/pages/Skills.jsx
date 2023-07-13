@@ -27,7 +27,7 @@ const languages = [
   {
     name: "Sass",
     url: "https://sass-lang.com/",
-    logo:"https://sass-lang.com/assets/img/styleguide/seal-color-aef0354c.png"
+    logo:"https://sass-lang.com/assets/img/logos/logo.svg"
   },
 ]
 
