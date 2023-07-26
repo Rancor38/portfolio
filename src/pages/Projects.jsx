@@ -19,21 +19,27 @@ const Projects = () => {
             description: "A Tamagotchi-like game for your browser!",
             url: "https://rancor38.github.io/textmagotchi/",
         },
+        {
+            name: "EZ-Notes",
+            description: "An application for saving rich text notes online.",
+            url: "https://ez-notes.netlify.app/",
+        },
        {
             name: "DM's Guild Titles",
             description: "A series of booklets published on DM's Guild. (Unavailable on Mobile devices, instead search 'Zakariah')",
             url: "https://www.dmsguild.com/browse.php?author=Zakariah",
         },
        {
+            name: "Borgbot",
+            description: "A do-it-all discord bot that is far too powerful for how silly it is.",
+            url: "https://github.com/Rancor38/borgbot/",
+        },
+       {
             name: "Simple-To-Do",
             description: "A simple rapidly fast to-do application that works without a database.",
             url: "https://rancor38.github.io/simple-to-do/",
         },
-       {
-            name: "EZ-Notes",
-            description: "An application for saving simple text notes online.",
-            url: "https://ez-notes.netlify.app/",
-        },
+       
     ]
 
     return (
