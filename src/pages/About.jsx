@@ -6,7 +6,7 @@ const About = () => {
 
     function handleDownload() {
         // Path to the file to be downloaded
-        const fileURL = process.env.PUBLIC_URL + "/resumePDF/resume.pdf";
+        const fileURL = process.env.PUBLIC_URL + "resumePDF/Zakariah_Software_Developer_Resume.pdf";
           // Create a temporary anchor element
         const downloadLink = document.createElement("a");
           // Set the href attribute to the file's URL
