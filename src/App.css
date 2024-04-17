@@ -190,6 +190,7 @@
 }
 
 .navBar li {
+        text-decoration: none;
         position: relative;
         list-style: none;
         margin-bottom: 20px;
@@ -307,7 +308,7 @@
         }
 }
 
-@media screen and (orientation: landscape) and (min-aspect-ratio: 16/9) {
+@media screen and (orientation: landscape) and (min-aspect-ratio: 16/9) and (max-width: 1200px) {
         /* CSS rules for landscape orientation with an aspect ratio of 16:9 or greater */
         .navBar {
                 position: sticky;
