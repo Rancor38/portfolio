@@ -6,7 +6,7 @@ function DownloadPDF() {
     // If user confirms, proceed with download
     if (isConfirmed) {
       // Path to the file to be downloaded
-      const fileURL = process.env.PUBLIC_URL + "/resumePDF/resume.pdf";
+      const fileURL = process.env.PUBLIC_URL + "/resumePDF/Zakariah_Software_Developer_Resume.pdf";
       
       // Create a temporary anchor element
       const downloadLink = document.createElement("a");

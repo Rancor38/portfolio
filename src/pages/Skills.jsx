@@ -1,8 +1,23 @@
 const languages = [
   {
-    name: "Python",
-    url: "https://www.python.org/",
-    logo:"https://symbols.getvecta.com/stencil_25/69_python.34cfd522d6.svg"
+    name: "Bash",
+    url: "https://www.gnu.org/software/bash/",
+    logo:"https://th.bing.com/th/id/OIP.ybGG_CSngnEabeh8AXzneAHaHa?rs=1&pid=ImgDetMain"
+  },
+  {
+    name: "Git",
+    url: "https://git-scm.com/",
+    logo:"https://th.bing.com/th/id/OIP.Xa0BEkwl0Zx4qnY9lMbD7gHaHa?rs=1&pid=ImgDetMain"
+  },
+  {
+    name: "AWS CLI",
+    url: "https://aws.amazon.com/cli/",
+    logo:"https://mark-tucker.gallerycdn.vsassets.io/extensions/mark-tucker/aws-cli-configure/0.3.0/1528734149540/Microsoft.VisualStudio.Services.Icons.Default"
+  },
+  {
+    name: "SQL",
+    url: "https://www.w3schools.com/sql/",
+    logo:"https://th.bing.com/th/id/OIP.Km_m9jrOZV9T6Ik6shbN4QAAAA?rs=1&pid=ImgDetMain"
   },
   {
     name: "JavaScript",
@@ -15,19 +30,9 @@ const languages = [
     logo:"https://symbols.getvecta.com/stencil_25/87_typescript.cb2d7326fa.svg"
   },
   {
-    name: "Bash",
-    url: "https://www.gnu.org/software/bash/",
-    logo:"https://th.bing.com/th/id/OIP.slnW5aVlEMsfDQXU2AJAHwHaH8?rs=1&pid=ImgDetMain"
-  },
-  {
-    name: "Git",
-    url: "https://git-scm.com/",
-    logo:"https://th.bing.com/th/id/OIP.Xa0BEkwl0Zx4qnY9lMbD7gHaHa?rs=1&pid=ImgDetMain"
-  },
-  {
-    name: "AWS CLI",
-    url: "https://aws.amazon.com/cli/",
-    logo:"https://mark-tucker.gallerycdn.vsassets.io/extensions/mark-tucker/aws-cli-configure/0.3.0/1528734149540/Microsoft.VisualStudio.Services.Icons.Default"
+    name: "Python",
+    url: "https://www.python.org/",
+    logo:"https://symbols.getvecta.com/stencil_25/69_python.34cfd522d6.svg"
   },
   {
     name: "HTML",
@@ -51,6 +56,16 @@ const frameworks = [
     name: "Django",
     url: "https://www.djangoproject.com/",
     logo:"https://img.stackshare.io/service/994/4aGjtNQv.png"
+  },
+  {
+    name: "AWS CDK",
+    url: "https://aws.amazon.com/cdk/",
+    logo:"https://portfolio.iyarles.net/images/aws-cdk.png"
+  },
+  {
+    name: "Electron",
+    url: "https://www.electronjs.org/",
+    logo:"https://1.bp.blogspot.com/-Vy9pLAgWcmE/XYpPg7UrsfI/AAAAAAAAAEw/0O20otKyG9I5aBPraajepe_vSZtUccmZQCLcBGAsYHQ/w680/1200px-Electron_Software_Framework_Logo.svg.png"
   },
   {
     name: "Next.js",
@@ -98,7 +113,7 @@ const databases = [
   {
     name: "S3",
     url: "https://aws.amazon.com/s3/",
-    logo:"https://www.clipartkey.com/mpngs/m/23-235178_introducing-s-aws-s3-bucket-icon.png"
+    logo:"https://everybit.cloud/wp-content/uploads/2020/08/s3.png"
   },
   {
     name: "MongoDB",
@@ -325,7 +340,7 @@ const Skills = () => {
         {certs.map((map) => (
           <a href={map.url} target="_blank" rel="noreferer noreferrer">
           <img src={map.logo} alt={map.name} />
-          <li>{map.name}</li>
+            <li>{map.name}</li>
         </a>
         ))}
       </ul>
