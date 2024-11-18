@@ -176,7 +176,7 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-        font-weight: bold;
+	font-weight: bold;
 }
 
 .contact button:hover {
@@ -273,15 +273,21 @@
 
 	.navBar:hover {
 		width: 90%;
+		text-decoration: underline; /* Optional underline on hover */
+		transform: scale(1.05);
 	}
 
 	.navBar li {
 		margin-top: 24px;
 		margin-left: 0px;
+		text-decoration: none !important; /* Ensure no underline */
 	}
 
 	.navBar a {
 		margin-left: 0px;
+		text-decoration: none !important; /* Ensure no underline */
+		color: inherit;
+		transition: all 0.3s ease;
 	}
 }
 
