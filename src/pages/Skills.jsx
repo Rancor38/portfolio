@@ -17,7 +17,7 @@ const languages = [
   {
     name: "SQL",
     url: "https://www.w3schools.com/sql/",
-    logo:"https://th.bing.com/th/id/OIP.Km_m9jrOZV9T6Ik6shbN4QAAAA?rs=1&pid=ImgDetMain"
+    logo:"https://th.bing.com/th/id/OIP.iw-ScJX2SHkgvcaplgn-swHaFj?rs=1&pid=ImgDetMain"
   },
   {
     name: "JavaScript",
@@ -85,7 +85,7 @@ const frameworks = [
   {
     name: "Flask",
     url: "https://flask.palletsprojects.com/en/2.3.x/",
-    logo:"https://flask.palletsprojects.com/en/2.2.x/_static/flask-icon.png"
+    logo:"https://th.bing.com/th/id/OIP.t1Tj83H0YrBBMicwWmAU2QHaKF?w=900&h=1225&rs=1&pid=ImgDetMain"
   },
   {
     name: "Bootstrap",
@@ -113,7 +113,7 @@ const databases = [
   {
     name: "S3",
     url: "https://aws.amazon.com/s3/",
-    logo:"https://everybit.cloud/wp-content/uploads/2020/08/s3.png"
+    logo:"https://th.bing.com/th/id/OIP.CLJe6pyGtWefUYRR6P5UpAHaI-?rs=1&pid=ImgDetMain"
   },
   {
     name: "MongoDB",
@@ -287,65 +287,137 @@ const certs = [
 ]
 
 const Skills = () => {
+  const handleImageError = (event) => {
+    // Replace the image with the text when it fails to load
+    event.target.style.display = 'none';
+    event.target.nextSibling.style.display = 'block';
+  };
+
   return (
     <section className="skills">
       <h2>Skills</h2>
+
       <h3>Languages</h3>
       <ul>
         {languages.map((map) => (
-          <a href={map.url} target="_blank" rel="noreferer noreferrer">
-            <img src={map.logo} alt={map.name} />
+          <a
+            key={map.name}
+            href={map.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={map.logo}
+              alt={map.name}
+              onError={handleImageError}
+            />
+            <span style={{ display: 'none' }}>&lt;Logo Missing&gt;</span>
             <li>{map.name}</li>
           </a>
         ))}
       </ul>
+
       <h3>Libraries / Frameworks</h3>
       <ul>
-      {frameworks.map((map) => (
-          <a href={map.url} target="_blank" rel="noreferer noreferrer">
-          <img src={map.logo} alt={map.name} />
-          <li>{map.name}</li>
-        </a>
+        {frameworks.map((map) => (
+          <a
+            key={map.name}
+            href={map.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={map.logo}
+              alt={map.name}
+              onError={handleImageError}
+            />
+            <span style={{ display: 'none' }}>&lt;Logo Missing&gt;</span>
+            <li>{map.name}</li>
+          </a>
         ))}
       </ul>
+
       <h3>Databases/Storage</h3>
       <ul>
-      {databases.map((map) => (
-          <a href={map.url} target="_blank" rel="noreferer noreferrer">
-          <img src={map.logo} alt={map.name} />
-          <li>{map.name}</li>
-        </a>
+        {databases.map((map) => (
+          <a
+            key={map.name}
+            href={map.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={map.logo}
+              alt={map.name}
+              onError={handleImageError}
+            />
+            <span style={{ display: 'none' }}>&lt;Logo Missing&gt;</span>
+            <li>{map.name}</li>
+          </a>
         ))}
       </ul>
+
       <h3>Deployment</h3>
       <ul>
-      {deployment.map((map) => (
-          <a href={map.url} target="_blank" rel="noreferer noreferrer">
-          <img src={map.logo} alt={map.name} />
-          <li>{map.name}</li>
-        </a>
+        {deployment.map((map) => (
+          <a
+            key={map.name}
+            href={map.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={map.logo}
+              alt={map.name}
+              onError={handleImageError}
+            />
+            <span style={{ display: 'none' }}>&lt;Logo Missing&gt;</span>
+            <li>{map.name}</li>
+          </a>
         ))}
       </ul>
+
       <h3>Other Tech</h3>
       <ul>
         {other.map((map) => (
-          <a href={map.url} target="_blank" rel="noreferer noreferrer">
-          <img src={map.logo} alt={map.name} />
-          <li>{map.name}</li>
-        </a>
+          <a
+            key={map.name}
+            href={map.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={map.logo}
+              alt={map.name}
+              onError={handleImageError}
+            />
+            <span style={{ display: 'none' }}>&lt;Logo Missing&gt;</span>
+            <li>{map.name}</li>
+          </a>
         ))}
       </ul>
+
       <h3>Certifications</h3>
       <ul>
         {certs.map((map) => (
-          <a href={map.url} target="_blank" rel="noreferer noreferrer">
-          <img src={map.logo} alt={map.name} />
+          <a
+            key={map.name}
+            href={map.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={map.logo}
+              alt={map.name}
+              onError={handleImageError}
+            />
+            <span style={{ display: 'none' }}>&lt;Logo Missing&gt;</span>
             <li>{map.name}</li>
-        </a>
+          </a>
         ))}
       </ul>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
