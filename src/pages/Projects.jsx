@@ -7,12 +7,60 @@ const Projects = () => {
     const [visibleProjects, setVisibleProjects] = useState([]);
     const [filter, setFilter] = useState('all');
 
+    // Project data is used in the Resume component through projectsData.js
     const projects = [
+        // Enterprise AWS Projects - Most Impressive
         {
-            name: "RPG-Dice-React",
-            description: "An application for rolling polyhedral dice for tabletop rollplaying games.",
-            url: "https://rpg-dice-react.netlify.app/",
-            categories: ["web", "frontend"]
+            name: "LoRaWAN Platform CI/CD Pipeline",
+            description: "Architected and implemented a multi-account AWS CDK infrastructure-as-code solution for Amazon's LoRaWAN IoT platform, establishing automated CI/CD pipelines with approval gates that seamlessly deploy across development and production environments.",
+            url: "https://www.amazon.com/b2b",
+            categories: ["backend", "aws", "iot", "cdk", "enterprise", "cicd", "cloud"]
+        },
+        {
+            name: "BMS Monitoring Suite for Amazon OpsTech",
+            description: "Led development of comprehensive Building Management System (BMS) monitoring measures for all Corp connected OpsTech support buildings at Amazon, creating enterprise solutions that monitor facility infrastructure, improve operational efficiency, and enable proactive maintenance across the global building network.",
+            url: "https://www.amazon.com/b2b",
+            categories: ["backend", "utility", "aws", "iot", "data", "cdk", "enterprise"]
+        },
+        {
+            name: "Hardware Installation App",
+            description: "A mobile-optimized web application deployed on AWS for field technicians to document and track hardware installations with photo evidence, featuring offline support, image processing, and robust cloud storage using AWS serverless architecture.",
+            url: "https://www.amazon.com/b2b",
+            categories: ["web", "full-stack", "backend", "utility", "mobile", "aws", "enterprise"]
+        },
+        {
+            name: "Device Health App",
+            description: "A web application deployed on AWS for monitoring and managing IoT devices, featuring real-time health status tracking for LoRaWAN sensors and gateways. Built with React, Python Lambda, and AWS CDK.",
+            url: "https://www.amazon.com/b2b",
+            categories: ["web", "full-stack", "backend", "utility", "aws", "iot", "enterprise"]
+        },
+        {
+            name: "Wirefree Gateway Health Dashboard",
+            description: "AWS CDK solution that monitors LoRaWAN gateway connectivity for Amazon's Corp connected OpsTech support facilities, providing real-time visibility into building management systems across the global infrastructure and enabling timely issue detection through automated health snapshots and visual analytics.",
+            url: "https://www.amazon.com/b2b",
+            categories: ["backend", "utility", "aws", "iot", "data", "cdk", "enterprise"]
+        },
+        {
+            name: "LoRaWAN Device Health Dashboard",
+            description: "Enterprise AWS solution for monitoring IoT sensor networks throughout Amazon's global OpsTech support buildings, creating automated snapshots of building management system health metrics and enabling facilities teams to maintain optimal operational conditions through comprehensive visual dashboards.",
+            url: "https://www.amazon.com/b2b",
+            categories: ["backend", "utility", "aws", "iot", "data", "enterprise"]
+        },
+
+        // Professional Web Applications - Highly Impressive
+        {
+            name: "Aqueduct",
+            description: "A complex web-based tool for data flow management and visualization.",
+            url: "https://milvian.group/aqueduct/",
+            categories: ["web", "frontend", "full-stack"]
+        },
+
+        // Notable Personal Projects - Moderately Impressive
+        {
+            name: "EZ-Notes",
+            description: "An application for saving rich text notes online.",
+            url: "https://ez-notes.netlify.app/",
+            categories: ["web", "full-stack"]
         },
         {
             name: "Monster Finder",
@@ -21,17 +69,13 @@ const Projects = () => {
             categories: ["web", "database"]
         },
         {
-            name: "Textmagotchi",
-            description: "A Tamagotchi-like game for your browser!",
-            url: "https://rancor38.github.io/textmagotchi/",
-            categories: ["game", "frontend"]
+            name: "Borgbot",
+            description: "A do-it-all discord bot that is far too powerful for how silly it is.",
+            url: "https://github.com/Rancor38/borgbot/",
+            categories: ["utility", "backend"]
         },
-        {
-            name: "EZ-Notes",
-            description: "An application for saving rich text notes online.",
-            url: "https://ez-notes.netlify.app/",
-            categories: ["web", "full-stack"]
-        },
+
+        // Smaller Fun Projects - Interesting but Less Complex
         {
             name: "DM's Guild Titles",
             description: "A series of booklets published on DM's Guild. (Unavailable on Mobile devices, instead search 'Zakariah')",
@@ -39,10 +83,16 @@ const Projects = () => {
             categories: ["writing"]
         },
         {
-            name: "Borgbot",
-            description: "A do-it-all discord bot that is far too powerful for how silly it is.",
-            url: "https://github.com/Rancor38/borgbot/",
-            categories: ["utility", "backend"]
+            name: "Textmagotchi",
+            description: "A Tamagotchi-like game for your browser!",
+            url: "https://rancor38.github.io/textmagotchi/",
+            categories: ["game", "frontend"]
+        },
+        {
+            name: "RPG-Dice-React",
+            description: "An application for rolling polyhedral dice for tabletop rollplaying games.",
+            url: "https://rpg-dice-react.netlify.app/",
+            categories: ["web", "frontend"]
         },
         {
             name: "Simple-To-Do",
@@ -53,7 +103,7 @@ const Projects = () => {
     ];
 
     // Filter categories
-    const categories = ["all", "web", "frontend", "backend", "full-stack", "game", "writing", "utility", "database"];
+    const categories = ["all", "web", "frontend", "backend", "full-stack", "game", "writing", "utility", "database", "mobile", "aws", "iot", "data", "cdk", "enterprise", "cicd", "cloud"];
 
     // Filtered projects
     const filteredProjects = filter === 'all'

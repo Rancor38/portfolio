@@ -1,15 +1,13 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 
-function DownloadPDF({ handler }) {
+function DownloadPDF({ className = '' }) {
   function handleDownload() {
     // Display a confirmation dialog
     const isConfirmed = window.confirm("Download latest resume?");
 
     // If user confirms, proceed with download
     if (isConfirmed) {
-      // Call the handler first to handle any navigation transitions
-      if (handler) handler();
-
       // Path to the file to be downloaded
       const fileURL = process.env.PUBLIC_URL + "/resumePDF/Zakariah_Software_Developer_Resume.pdf";
 
@@ -37,22 +35,22 @@ function DownloadPDF({ handler }) {
   }
 
   return (
-    <motion.li
+    <motion.button
       onClick={handleDownload}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="resume-button"
+      className={`download-resume-btn ${className}`}
     >
-      Resume
-      <motion.div
+      Download PDF
+      <motion.span
         className="download-indicator"
         initial={{ opacity: 0, y: 5 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2, repeat: Infinity, repeatType: "reverse" }}
       >
         ↓
-      </motion.div>
-    </motion.li>
+      </motion.span>
+    </motion.button>
   );
 }
 

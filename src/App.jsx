@@ -1,67 +1,162 @@
 import './App.css';
-import { Route, Routes, useLocation } from 'react-router-dom';
-import { useState, useCallback, lazy, Suspense } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useRef, useState, useEffect, lazy, Suspense } from 'react';
+import { motion } from 'framer-motion';
 
 // Components
-import Nav from './components/Nav';
 import Loading from './components/Loading';
+import Header from './components/Header';
 
 // Lazy-loaded pages for better performance
 const About = lazy(() => import('./pages/About'));
 const Skills = lazy(() => import('./pages/Skills'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
-const PageNotFound = lazy(() => import('./pages/PageNotFound'));
-const Redirects = lazy(() => import('./components/Redirects'));
+const Resume = lazy(() => import('./pages/Resume'));
 
 const App = () => {
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState('about');
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+  const resumeRef = useRef(null);
 
-  // Function to handle page transition (memoized with useCallback)
-  const handleTransition = useCallback(() => {
-    setIsTransitioning(true);
+  // Track scrolling and update active section
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 200; // Adding offset for better detection
 
-    // Wait for the transition to complete before updating state
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 300);
+      // Check which section is currently in view
+      if (aboutRef.current && scrollPosition >= aboutRef.current.offsetTop &&
+        scrollPosition < (skillsRef.current?.offsetTop || Infinity)) {
+        setActiveSection('about');
+      } else if (skillsRef.current && scrollPosition >= skillsRef.current.offsetTop &&
+        scrollPosition < (projectsRef.current?.offsetTop || Infinity)) {
+        setActiveSection('skills');
+      } else if (projectsRef.current && scrollPosition >= projectsRef.current.offsetTop &&
+        scrollPosition < (contactRef.current?.offsetTop || Infinity)) {
+        setActiveSection('projects');
+      } else if (contactRef.current && scrollPosition >= contactRef.current.offsetTop &&
+        scrollPosition < (resumeRef.current?.offsetTop || Infinity)) {
+        setActiveSection('contact');
+      } else if (resumeRef.current && scrollPosition >= resumeRef.current.offsetTop) {
+        setActiveSection('resume');
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Page transition variants for framer-motion
-  const pageVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 }
+  // Scroll to section function
+  const scrollToSection = (sectionRef) => {
+    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Navigation items
+  const navItems = [
+    { id: 'about', label: 'About', ref: aboutRef },
+    { id: 'skills', label: 'Skills', ref: skillsRef },
+    { id: 'projects', label: 'Projects', ref: projectsRef },
+    { id: 'contact', label: 'Contact', ref: contactRef },
+    { id: 'resume', label: 'Resume', ref: resumeRef }
+  ];
+
   return (
-    <>
-      <Nav handler={handleTransition} />
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={location.pathname}
-          className="portfolio"
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={pageVariants}
-          transition={{ type: "tween", ease: "easeInOut", duration: 0.3 }}
+    <div className="smooth-scroll-container">
+      {/* Navigation Bar */}
+      <nav className="fixed-nav">
+        <ul>
+          {navItems.map((item) => (
+            <li
+              key={item.id}
+              className={activeSection === item.id ? 'active' : ''}
+              onClick={() => scrollToSection(item.ref)}
+            >
+              {item.label}
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Consolidated Header Component */}
+      {/* <Header /> */}
+
+
+      {/* Main Content */}
+      <div className="sections-container">
+        {/* About Section */}
+        <motion.section
+          ref={aboutRef}
+          className="section"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ duration: 0.4 }}
         >
           <Suspense fallback={<Loading />}>
-            <Routes location={location}>
-              <Route path='/' element={<About />} />
-              <Route path='/skills' element={<Skills />} />
-              <Route path='/projects' element={<Projects />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/snoof' element={<PageNotFound />} />
-              <Route path='*' element={<Redirects />} />
-            </Routes>
+            <About />
           </Suspense>
-        </motion.div>
-      </AnimatePresence>
-    </>
+        </motion.section>
+
+        {/* Skills Section */}
+        <motion.section
+          ref={skillsRef}
+          className="section"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Suspense fallback={<Loading />}>
+            <Skills />
+          </Suspense>
+        </motion.section>
+
+        {/* Projects Section */}
+        <motion.section
+          ref={projectsRef}
+          className="section"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Suspense fallback={<Loading />}>
+            <Projects />
+          </Suspense>
+        </motion.section>
+
+        {/* Contact Section */}
+        <motion.section
+          ref={contactRef}
+          className="section"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Suspense fallback={<Loading />}>
+            <Contact />
+          </Suspense>
+        </motion.section>
+
+        {/* Resume Section */}
+        <motion.section
+          ref={resumeRef}
+          className="section"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Suspense fallback={<Loading />}>
+            <Resume />
+          </Suspense>
+        </motion.section>
+      </div>
+    </div>
   );
 }
 

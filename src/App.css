@@ -9,6 +9,7 @@
     --transition-speed: 0.3s;
     --border-radius: 8px;
     --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --section-spacing: 30px; /* Reduced from 80px to 30px */
 }
 
 /* Global styles */
@@ -16,6 +17,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* To account for fixed nav */
+    overflow-x: hidden;
+    overflow-y: auto; /* Only allow vertical scrolling at the document root */
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -26,6 +37,184 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.5;
+    position: relative; /* Create a stacking context */
+}
+
+/* Smooth scrolling container styles */
+.smooth-scroll-container {
+    width: 100%;
+    min-height: 100vh;
+    overflow: visible; /* Changed from overflow-x: hidden to visible */
+}
+
+/* Fixed navigation styles */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(180deg, var(--accent-color), #4a00e0);
+    border-radius: 0 0 16px 16px;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+.fixed-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fixed-nav li {
+    padding: 15px 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.fixed-nav li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.fixed-nav li.active::after,
+.fixed-nav li:hover::after {
+    width: 70%;
+}
+
+.fixed-nav li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sections container */
+.sections-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 70px; /* Account for fixed nav */
+    overflow: visible;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Ensure no gaps between sections */
+}
+
+/* Main header styles */
+.main-header {
+    width: 100%;
+    padding: 30px 20px; /* Reduced padding from 40px to 30px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Reduced from 70vh to 60vh */
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.main-header header {
+    margin-bottom: 20px;
+}
+
+.main-header header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    background: linear-gradient(135deg, var(--accent-color), #4a00e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent; /* For future compatibility */
+}
+
+.main-header header p {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin: 0;
+    margin-top: 5px;
+}
+
+/* Profile section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.typed-description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    min-height: 2rem;
+}
+
+/* Section styles */
+.section {
+    min-height: 90vh; /* Reduced from 100vh to 90vh */
+    padding: 30px 20px; /* Reduced from 40px to 30px */
+    /* Removed margin-bottom to eliminate gaps */
+    display: flex;
+    flex-direction: column;
+    overflow: visible; /* Ensure consistency */
+    position: relative;
+}
+
+/* Individual section styling */
+.section:nth-child(odd) {
+    background-color: var(--background-color);
+}
+
+.section:nth-child(even) {
+    background-color: rgba(138, 43, 226, 0.03);
+    border-radius: var(--border-radius);
+}
+
+/* Ensure sections overlap slightly to prevent whitespace */
+.section + .section {
+    margin-top: -20px; /* Negative margin to create overlap */
+    padding-top: 40px; /* Extra padding to compensate for the overlap */
+}
+
+/* Responsive styles for the fixed nav */
+@media only screen and (max-width: 768px) {
+    .fixed-nav {
+        right: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .fixed-nav ul {
+        justify-content: space-around;
+    }
+
+    .fixed-nav li {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .fixed-nav li {
+        padding: 12px 8px;
+        font-size: 0.8rem;
+    }
+
+    .section {
+        padding: 30px 15px;
+    }
 }
 
 /* Portfolio container */
@@ -149,6 +338,7 @@ body {
     background-color: var(--card-background);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    overflow: hidden; /* Prevent internal scrolling */
 }
 
 .skills h2 {
@@ -182,6 +372,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    overflow: visible; /* Allow content to be visible */
 }
 
 .skills a {

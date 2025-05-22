@@ -1,0 +1,163 @@
+# ZAKARIAH J HALLOW - RESUME SUMMARY
+
+## CONTACT INFORMATION
+- **Name:** Zakariah J Hallow
+- **Email:** zakariahjhallow@outlook.com
+- **LinkedIn:** https://www.linkedin.com/in/zakariah-om
+- **GitHub:** https://github.com/Rancor38
+
+## PROFESSIONAL SUMMARY
+Software Developer with extensive experience in AWS cloud architecture, full-stack development, and IoT solutions. Specializes in enterprise-level infrastructure as code (IaC) development using AWS CDK and serverless architecture. Demonstrated expertise in building and maintaining CI/CD pipelines, monitoring systems, and web applications with a focus on scalability and reliability.
+
+## SKILLS
+
+### Programming Languages
+- JavaScript
+- TypeScript
+- HTML5
+- CSS3
+- Python
+- PHP
+- SQL
+
+### Frameworks & Libraries
+- React
+- Node.js
+- Express
+- Next.js
+- Django
+- Flask
+- Tailwind CSS
+- Bulma CSS
+- Framer Motion
+- Electron
+- Vite
+
+### Databases
+- MongoDB
+- PostgreSQL
+- SQLite
+- DynamoDB
+- Amazon RDS
+- Amazon Aurora
+- Amazon Timestream
+
+### Deployment & Version Control
+- Git
+- GitHub
+- Netlify
+- Heroku
+- Vercel
+- Amazon S3
+- Amazon CloudFront
+- Koyeb
+- Railway
+- Route 53
+- Elastic Beanstalk
+
+### AWS Services
+- AWS CDK
+- Lambda
+- API Gateway
+- IAM
+- CloudWatch
+- CloudFormation
+- Secrets Manager
+- SNS
+- SQS
+- EC2
+- ECS
+- AWS CLI
+- IoT Core
+- Glue
+- Systems Manager
+- CodeBuild
+- CodeCommit
+- CodeDeploy
+- CodePipeline
+- Step Functions
+- QuickSight
+
+### Tools & Utilities
+- VS Code
+- npm
+- Postman
+- Canva
+- Jira
+- Slack
+- Trello
+- Notion
+- Discord
+- Bash
+- Miro
+- Office 365
+- Bitbucket Pipelines
+
+### Certifications
+- AWS Cloud Practitioner
+- AWS Solutions Architect
+- General Assembly Graduate
+
+### Other Technologies
+- LoRaWAN
+- DM's Guild
+
+## PROFESSIONAL EXPERIENCE
+
+### Enterprise AWS Projects
+
+**LoRaWAN Platform CI/CD Pipeline**
+- Architected and implemented a multi-account AWS CDK infrastructure-as-code solution for Amazon's LoRaWAN IoT platform
+- Established automated CI/CD pipelines with approval gates that seamlessly deploy across development and production environments
+- Technologies: AWS CDK, CI/CD, IoT, Cloud Infrastructure
+
+**BMS Monitoring Suite for Amazon OpsTech**
+- Led development of comprehensive Building Management System (BMS) monitoring measures for all Corp connected OpsTech support buildings at Amazon
+- Created enterprise solutions that monitor facility infrastructure, improve operational efficiency, and enable proactive maintenance across the global building network
+- Technologies: AWS, IoT, Data Engineering, CDK
+
+**Hardware Installation App**
+- Developed a mobile-optimized web application deployed on AWS for field technicians
+- Implemented features for documenting and tracking hardware installations with photo evidence
+- Built with offline support, image processing, and robust cloud storage using AWS serverless architecture
+- Technologies: Web, Full-Stack, Backend, Mobile, AWS
+
+**Device Health App**
+- Created a web application deployed on AWS for monitoring and managing IoT devices
+- Implemented real-time health status tracking for LoRaWAN sensors and gateways
+- Built with React, Python Lambda, and AWS CDK
+- Technologies: Web, Full-Stack, Backend, AWS, IoT
+
+**Wirefree Gateway Health Dashboard**
+- Developed AWS CDK solution that monitors LoRaWAN gateway connectivity for Amazon's Corp connected OpsTech support facilities
+- Provided real-time visibility into building management systems across the global infrastructure
+- Enabled timely issue detection through automated health snapshots and visual analytics
+- Technologies: Backend, AWS, IoT, Data, CDK
+
+**LoRaWAN Device Health Dashboard**
+- Built enterprise AWS solution for monitoring IoT sensor networks throughout Amazon's global OpsTech support buildings
+- Created automated snapshots of building management system health metrics
+- Enabled facilities teams to maintain optimal operational conditions through comprehensive visual dashboards
+- Technologies: Backend, AWS, IoT, Data
+
+### Professional Web Applications
+
+**Aqueduct**
+- A complex web-based tool for data flow management and visualization
+- Technologies: Web, Frontend, Full-Stack
+
+### Notable Projects
+
+**EZ-Notes** - An application for saving rich text notes online
+**Monster Finder** - An application for finding monsters to use in Dungeons & Dragons 5th Edition
+**Borgbot** - A multi-functional Discord bot with extensive capabilities
+**DM's Guild Titles** - A series of published booklets on DM's Guild
+**Textmagotchi** - A Tamagotchi-like browser game
+**RPG-Dice-React** - An application for rolling polyhedral dice for tabletop roleplaying games
+**Simple-To-Do** - A lightweight, fast to-do application
+
+## ADDITIONAL INFORMATION
+- Open to discussing new projects, creative ideas or opportunities
+- Experienced in building both consumer and enterprise applications
+- Skilled in both frontend and backend development
+- Strong focus on AWS cloud architecture and IoT solutions

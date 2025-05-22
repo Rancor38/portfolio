@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import TypeOut from '../components/TypeOut';
 import { motion } from 'framer-motion';
 
@@ -86,13 +86,33 @@ import stepFunctionsImage from '../images/step-functions.png';
 import quicksightImage from '../images/quicksight.png';
 
 const Skills = () => {
+  const [visibleCategories, setVisibleCategories] = useState([]);
+
+  // Add progressive loading of skill categories
+  useEffect(() => {
+    const categories = ['languages', 'frameworks', 'databases', 'deployment', 'tools', 'aws', 'certifications', 'other'];
+
+    // Create a staggered loading effect for categories
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex < categories.length) {
+        setVisibleCategories(prev => [...prev, categories[currentIndex]]);
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 300);
+
+    return () => clearInterval(interval);
+  }, []);
+
   // Animation variants for skills
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.05
       }
     }
   };
@@ -103,6 +123,7 @@ const Skills = () => {
   };
 
   // Skill categories with local images and reference URLs
+  // These are exported for use in the Resume component via skillsData.js
   const languages = [
     { name: "JavaScript", icon: jsImage, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
     { name: "TypeScript", icon: tsImage, url: "https://www.typescriptlang.org/" },
@@ -209,51 +230,53 @@ const Skills = () => {
     transition: 'transform 0.2s ease-in-out',
   };
 
-  // Render a category of skills - Updated to include reference URLs
-  const renderSkillCategory = (category, title) => (
-    <>
-      <h3>{title}</h3>
-      <motion.ul
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-      >
-        {category.map((skill) => (
-          <motion.li key={skill.name} variants={itemVariants}>
-            <a
-              href={skill.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={`Learn more about ${skill.name}`}
-            >
-              <img
-                src={skill.icon}
-                alt={skill.name}
-                style={roundedImageStyle}
-                onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)' }}
-                onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
-              />
-              <span>{skill.name}</span>
-            </a>
-          </motion.li>
-        ))}
-      </motion.ul>
-    </>
+  // Render a category of skills - Updated for progressive loading
+  const renderSkillCategory = (category, title, categoryId) => (
+    visibleCategories.includes(categoryId) && (
+      <>
+        <h3>{title}</h3>
+        <motion.ul
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {category.map((skill) => (
+            <motion.li key={skill.name} variants={itemVariants}>
+              <a
+                href={skill.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`Learn more about ${skill.name}`}
+              >
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  style={roundedImageStyle}
+                  onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)' }}
+                  onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
+                />
+                <span>{skill.name}</span>
+              </a>
+            </motion.li>
+          ))}
+        </motion.ul>
+      </>
+    )
   );
 
   return (
     <section className="skills">
       <h2><TypeOut inputString="Skills & Technologies" typeSpeed={50} /></h2>
 
-      {renderSkillCategory(languages, "Programming Languages")}
-      {renderSkillCategory(frameworks, "Frameworks & Libraries")}
-      {renderSkillCategory(databases, "Databases")}
-      {renderSkillCategory(deployment, "Deployment & Version Control")}
-      {renderSkillCategory(tools, "Tools & Utilities")}
-      {renderSkillCategory(aws, "AWS Services")}
-      {renderSkillCategory(certifications, "Certifications")}
-      {renderSkillCategory(other, "Other Technologies")}
+      {renderSkillCategory(languages, "Programming Languages", "languages")}
+      {renderSkillCategory(frameworks, "Frameworks & Libraries", "frameworks")}
+      {renderSkillCategory(databases, "Databases", "databases")}
+      {renderSkillCategory(deployment, "Deployment & Version Control", "deployment")}
+      {renderSkillCategory(tools, "Tools & Utilities", "tools")}
+      {renderSkillCategory(aws, "AWS Services", "aws")}
+      {renderSkillCategory(certifications, "Certifications", "certifications")}
+      {renderSkillCategory(other, "Other Technologies", "other")}
     </section>
   );
 };

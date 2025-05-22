@@ -69,6 +69,17 @@ const Nav = ({ handler }) => {
                     )}
                 </motion.li>
             </Link>
+            <motion.li
+                onClick={() => {
+                    window.open('/resume', '_blank');
+                    if (handler) handler();
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                style={{ cursor: 'pointer' }}
+            >
+                Resume
+            </motion.li>
             <DownloadPDF handler={handler} />
             <Link to='/contact'>
                 <motion.li
