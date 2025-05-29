@@ -128,6 +128,28 @@ const Projects = () => {
         return () => clearInterval(revealInterval);
     }, [filteredProjects.length, filter]);
 
+    // Function to determine grid columns based on screen width
+    const getGridColumns = () => {
+        const width = window.innerWidth;
+        if (width >= 1200) return 'repeat(4, 1fr)';
+        if (width >= 768) return 'repeat(3, 1fr)';
+        if (width >= 480) return 'repeat(2, 1fr)';
+        return '1fr';
+    };
+    
+    // State to track grid columns
+    const [gridColumns, setGridColumns] = useState(getGridColumns());
+    
+    // Update grid columns on window resize
+    useEffect(() => {
+        const handleResize = () => {
+            setGridColumns(getGridColumns());
+        };
+        
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -179,6 +201,12 @@ const Projects = () => {
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: gridColumns,
+                    gap: '20px',
+                    width: '100%'
+                }}
             >
                 {filteredProjects.map((project, index) => (
                     <motion.div

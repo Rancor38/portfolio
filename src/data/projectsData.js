@@ -63,6 +63,27 @@ export const featuredProjects = [
         liveUrl: "https://www.amazon.com/b2b",
     },
     {
+        title: "Hardware Installation App",
+        description:
+            "A mobile-optimized web application deployed on AWS for field technicians",
+        highlights: [
+            "Created app for documenting hardware installations with photo evidence",
+            "Implemented offline support and robust cloud storage",
+            "Built with AWS serverless architecture",
+        ],
+        categories: [
+            "web",
+            "full-stack",
+            "backend",
+            "utility",
+            "mobile",
+            "aws",
+            "enterprise",
+        ],
+        repoUrl: "https://github.com/private-repo",
+        liveUrl: "https://www.amazon.com/b2b",
+    },
+    {
         title: "Borgbot",
         description:
             "A do-it-all discord bot with AI, currency conversion, food commands, and humor",

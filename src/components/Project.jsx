@@ -3,22 +3,35 @@ import TypeOut from './TypeOut';
 import { motion } from 'framer-motion';
 
 const Project = ({ name, description, url }) => {
+    const estimatedHeight = Math.max(300, Math.ceil(description.length / 50) * 24 + 150);
+    
     return (
         <motion.div
             className="project"
-            whileHover={{ y: -10 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                width: '100%',
+                minWidth: 0,
+                maxWidth: '100%',
+                minHeight: `${estimatedHeight}px`
+            }}
         >
-            <h3>{name}</h3>
-            <p>
+            <motion.h3>{name}</motion.h3>
+            <motion.p>
                 <TypeOut inputString={description} typeSpeed={30} />
-            </p>
+            </motion.p>
             <motion.a
                 href={url}
                 target="_blank"
-                rel="noreferrer"
-                whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(138, 43, 226, 0.4)" }}
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                style={{ marginTop: 'auto', alignSelf: 'center' }}
             >
                 View Project
             </motion.a>

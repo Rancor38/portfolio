@@ -11,7 +11,6 @@ const About = lazy(() => import('./pages/About'));
 const Skills = lazy(() => import('./pages/Skills'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
-const Resume = lazy(() => import('./pages/Resume'));
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -19,7 +18,6 @@ const App = () => {
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  const resumeRef = useRef(null);
 
   // Track scrolling and update active section
   useEffect(() => {
@@ -36,11 +34,8 @@ const App = () => {
       } else if (projectsRef.current && scrollPosition >= projectsRef.current.offsetTop &&
         scrollPosition < (contactRef.current?.offsetTop || Infinity)) {
         setActiveSection('projects');
-      } else if (contactRef.current && scrollPosition >= contactRef.current.offsetTop &&
-        scrollPosition < (resumeRef.current?.offsetTop || Infinity)) {
+      } else if (contactRef.current && scrollPosition >= contactRef.current.offsetTop) {
         setActiveSection('contact');
-      } else if (resumeRef.current && scrollPosition >= resumeRef.current.offsetTop) {
-        setActiveSection('resume');
       }
     };
 
@@ -53,6 +48,11 @@ const App = () => {
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
   };
+  
+  // Navigate to resume page
+  const navigateToResume = () => {
+    window.location.href = '/resume';
+  };
 
   // Navigation items
   const navItems = [
@@ -60,7 +60,7 @@ const App = () => {
     { id: 'skills', label: 'Skills', ref: skillsRef },
     { id: 'projects', label: 'Projects', ref: projectsRef },
     { id: 'contact', label: 'Contact', ref: contactRef },
-    { id: 'resume', label: 'Resume', ref: resumeRef }
+    { id: 'resume', label: 'Resume', isResumeDownload: true }
   ];
 
   return (
@@ -72,7 +72,13 @@ const App = () => {
             <li
               key={item.id}
               className={activeSection === item.id ? 'active' : ''}
-              onClick={() => scrollToSection(item.ref)}
+              onClick={() => {
+                if (item.isResumeDownload) {
+                  navigateToResume();
+                } else {
+                  scrollToSection(item.ref);
+                }
+              }}
             >
               {item.label}
             </li>
@@ -142,19 +148,6 @@ const App = () => {
           </Suspense>
         </motion.section>
 
-        {/* Resume Section */}
-        <motion.section
-          ref={resumeRef}
-          className="section"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.1 }}
-          transition={{ duration: 0.4 }}
-        >
-          <Suspense fallback={<Loading />}>
-            <Resume />
-          </Suspense>
-        </motion.section>
       </div>
     </div>
   );

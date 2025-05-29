@@ -3,7 +3,7 @@
 
 // Base resume data
 const resumeData = {
-    name: "Zakariah O'Mara-Mezzano",
+    name: "Zakariah J Hallow",
     title: "Software Engineer",
     contact: {
         phone: "424-666-0598",
@@ -123,16 +123,6 @@ const resumeData = {
             ],
         },
         {
-            name: "Monster Finder",
-            type: "Solo",
-            github: "https://github.com/Rancor38/monster",
-            live: "https://monster-finders.netlify.app/",
-            description: [
-                "Search tool for D&D 5e monsters using Open5e API.",
-                "Built with React, optimized state management.",
-            ],
-        },
-        {
             name: "1-Day Textmagotchi",
             type: "Solo",
             github: "https://github.com/Rancor38/textmagotchi",
@@ -175,8 +165,7 @@ const resumeData = {
 // Function to dynamically merge in project data when Projects component exists
 const updateProjectsFromPortfolio = (resumeData) => {
     try {
-        // Import projects data from local variables
-        // These would normally be imported from projectsData.js
+        // Using hardcoded project data - now including Hardware Installation App
         const featuredProjects = [
             {
                 title: "Aqueduct",
@@ -239,6 +228,27 @@ const updateProjectsFromPortfolio = (resumeData) => {
                 liveUrl: "https://www.amazon.com/b2b",
             },
             {
+                title: "Hardware Installation App",
+                description:
+                    "A mobile-optimized web application deployed on AWS for field technicians",
+                highlights: [
+                    "Created app for documenting hardware installations with photo evidence",
+                    "Implemented offline support and robust cloud storage",
+                    "Built with AWS serverless architecture",
+                ],
+                categories: [
+                    "web",
+                    "full-stack",
+                    "backend",
+                    "utility",
+                    "mobile",
+                    "aws",
+                    "enterprise",
+                ],
+                repoUrl: "https://github.com/private-repo",
+                liveUrl: "https://www.amazon.com/b2b",
+            },
+            {
                 title: "Borgbot",
                 description:
                     "A do-it-all discord bot with AI, currency conversion, food commands, and humor",
@@ -258,8 +268,12 @@ const updateProjectsFromPortfolio = (resumeData) => {
         ]
 
         if (featuredProjects) {
-            // Take the top 5 projects from the Projects component
-            const topProjects = featuredProjects.slice(0, 5).map((project) => ({
+            // Remove Monster Finder from dynamic projects
+            const filteredProjects = featuredProjects.filter(
+                (project) => project.title !== "Monster Finder"
+            )
+            // Take the top 6 projects (excluding Monster Finder)
+            const topProjects = filteredProjects.slice(0, 6).map((project) => ({
                 name: project.title,
                 type: project.categories.includes("enterprise")
                     ? "Enterprise"
