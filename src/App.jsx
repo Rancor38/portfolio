@@ -48,7 +48,7 @@ const App = () => {
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
   };
-  
+
   // Navigate to resume page
   const navigateToResume = () => {
     window.location.href = '/resume';

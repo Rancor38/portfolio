@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Project = ({ name, description, url }) => {
     const estimatedHeight = Math.max(300, Math.ceil(description.length / 50) * 24 + 150);
-    
+
     return (
         <motion.div
             className="project"

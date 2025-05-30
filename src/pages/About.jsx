@@ -15,23 +15,8 @@ const About = () => {
         "And at the bottom, you'll find contact information with a few ways to reach out/find me online!"
     ];
 
-    function handleDownload() {
-        // Path to the file to be downloaded
-        const fileURL = process.env.PUBLIC_URL + "/resumePDF/Zakariah_Software_Developer_Resume.pdf";
-        // Create a temporary anchor element
-        const downloadLink = document.createElement("a");
-        // Set the href attribute to the file's URL
-        downloadLink.href = fileURL;
-        // Set the download attribute to the file's name
-        downloadLink.download = "Zakariah's_Resume.pdf";
-        // Append the anchor element to the document body
-        document.body.appendChild(downloadLink);
-        // Click the download link to start the download
-        downloadLink.click();
-        // Remove the temporary anchor element
-        document.body.removeChild(downloadLink);
-        // Open the downloaded file in a new window
-        window.open(fileURL, "_blank");
+    function handleResumeClick() {
+        window.location.href = '/resume';
     }
 
     // Setup staggered reveal of bullet points
@@ -47,7 +32,7 @@ const About = () => {
         }, 1000); // 1 second delay between starting each bullet point typing
 
         return () => clearInterval(interval);
-    }, []);
+    }, [bulletPoints.length]);
 
     // Handler for when typing is complete for a bullet point
     const handleTypingComplete = (index) => {
@@ -57,7 +42,7 @@ const About = () => {
     return (
         <>
             <div className="portfolio header-section">
-                <Header/>
+                <Header />
             </div>
             <section className="about-me">
                 <h2><TypeOut inputString="About Me" typeSpeed={50} /></h2>
@@ -75,12 +60,12 @@ const About = () => {
                                     index === 2 ? (
                                         <>
                                             <TypeOut
-                                                inputString="Resume "
+                                                inputString="My resume "
                                                 typeSpeed={40}
                                                 onComplete={() => handleTypingComplete(index)}
                                             />
                                             {typingDone.includes(index) && (
-                                                <a href='#' onClick={(e) => { e.preventDefault(); handleDownload(); }}>is also available for download here.</a>
+                                                <a href="/resume">is available here.</a>
                                             )}
                                         </>
                                     ) : (

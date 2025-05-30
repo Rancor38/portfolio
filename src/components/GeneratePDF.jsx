@@ -117,7 +117,7 @@ const GeneratePDF = ({ className = '', style = {} }) => {
         notification.style.transition = 'opacity 0.5s ease';
         setTimeout(() => document.body.removeChild(notification), 500);
       }, 3000);
-      
+
       // If this was launched from a standalone resume page, indicate successful generation
       // This works in conjunction with the Resume.jsx component's navigation behavior
       const currentPath = window.location.pathname;

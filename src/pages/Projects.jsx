@@ -136,16 +136,16 @@ const Projects = () => {
         if (width >= 480) return 'repeat(2, 1fr)';
         return '1fr';
     };
-    
+
     // State to track grid columns
     const [gridColumns, setGridColumns] = useState(getGridColumns());
-    
+
     // Update grid columns on window resize
     useEffect(() => {
         const handleResize = () => {
             setGridColumns(getGridColumns());
         };
-        
+
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);

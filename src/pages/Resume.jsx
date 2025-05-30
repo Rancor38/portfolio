@@ -20,15 +20,15 @@ const Resume = () => {
   useEffect(() => {
     if (isStandalonePage && resumeData) {
       setIsPrintFriendly(true);
-      
+
       // Function to navigate back to the home page
       const navigateToHome = () => {
         window.location.href = '/';
       };
-      
+
       // Show the download prompt
       const shouldDownload = window.confirm('Would you like to download the resume as a PDF?');
-      
+
       if (shouldDownload) {
         // Delay slightly to ensure the content is rendered in print-friendly mode
         setTimeout(() => {
@@ -36,7 +36,7 @@ const Resume = () => {
           if (generatePDFButton) {
             // Click the PDF button
             generatePDFButton.click();
-            
+
             // Navigate back to home after a delay to allow download to start
             setTimeout(() => {
               navigateToHome();
@@ -131,7 +131,14 @@ const Resume = () => {
   }
 
   return (
-    <div className={`resume-container ${isPrintFriendly ? 'print-friendly' : ''}`}>
+    <div className={`resume-container light-mode ${isPrintFriendly ? 'print-friendly' : ''}`} style={{
+      '--text-color': '#333',
+      '--background-color': '#fff',
+      '--card-background': '#f9f9f9',
+      '--secondary-color': '#555',
+      color: '#333',
+      backgroundColor: '#fff'
+    }}>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5em' }}>
         {/* Z | H Symbol in a circle */}
         <div style={{

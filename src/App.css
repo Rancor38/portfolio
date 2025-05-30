@@ -805,6 +805,7 @@ body {
 .snoof {
     max-width: 300px;
     animation: float 3s ease-in-out infinite;
+    border-radius: 50%;
 }
 
 @keyframes float {
@@ -965,5 +966,23 @@ body {
 
     .skills img {
         filter: brightness(0.9) contrast(1.1);
+    }
+
+    /* Force light mode for resume */
+    .light-mode {
+        --text-color: #333 !important;
+        --background-color: #fff !important;
+        --card-background: #f9f9f9 !important;
+        --secondary-color: #555 !important;
+        color: #333 !important;
+        background-color: #fff !important;
+    }
+
+    .light-mode * {
+        color: inherit;
+    }
+
+    .light-mode img {
+        filter: none !important;
     }
 }
