@@ -106,6 +106,28 @@ export const featuredProjects = [
         liveUrl: "https://www.amazon.com/b2b",
     },
     {
+        title: "I Must Kill - Game Reference Website",
+        description:
+            "Designed and built a comprehensive digital reference website for my original tabletop role-playing game 'I Must Kill'",
+        highlights: [
+            "Created dark fantasy RPG with unique combat and magic systems",
+            "Built interactive character sheets and equipment generators",
+            "Implemented real-time initiative tracker with Liveshare functionality",
+            "Developed searchable databases for powers, equipment, and monsters",
+            "Designed responsive UI with dark/light theme support",
+        ],
+        categories: [
+            "web",
+            "frontend",
+            "game",
+            "design",
+            "react",
+            "full-stack",
+        ],
+        repoUrl: "https://github.com/Rancor38/imustkill-website",
+        liveUrl: "https://imustkill.com/",
+    },
+    {
         title: "Borgbot",
         description:
             "A do-it-all discord bot with AI, currency conversion, food commands, and humor",
