@@ -3,6 +3,28 @@
 
 export const featuredProjects = [
     {
+        title: "Atria",
+        description:
+            "Proposed and spearheaded development of Milvian Group's extensible hardware platform for install, monitoring, and provisioning LoRaWAN devices, both an internal and customer-facing solution for Amazon",
+        highlights: [
+            "Unified platform for hardware installers, device provisioners, and site administrators",
+            "Migrated and expanded Install App and Device Health App functionality",
+            "Integrated site survey solutions and device dashboards",
+            "Designed comprehensive device provisioning system",
+        ],
+        categories: [
+            "web",
+            "full-stack",
+            "enterprise",
+            "architecture",
+            "hardware",
+            "iot",
+            "platform",
+        ],
+        repoUrl: "https://github.com/private-repo",
+        liveUrl: "https://www.atria.milvian-amzl.com/",
+    },
+    {
         title: "Aqueduct",
         description:
             "Architected and led development of Milvian Group's flagship web application for complex data flow management and visualization",
